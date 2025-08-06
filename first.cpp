@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 bool isPrime(int n) {
@@ -22,4 +22,35 @@ int main() {
         cout << num << " is not a prime number\n";
 
     return 0;
+}*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int num, original, sum = 0, digits = 0;
+    cout << "Enter a number: ";
+    cin >> num;
+    original = num;
+
+    int temp = num;
+    while (temp != 0) {
+        digits++;
+        temp /= 10;
+    }
+
+    temp = num;
+    while (temp != 0) {
+        int digit = temp % 10;
+        sum += pow(digit, digits);
+        temp /= 10;
+    }
+
+    if (sum == original)
+        cout << original << " is an Armstrong number\n";
+    else
+        cout << original << " is not an Armstrong number\n";
+
+    return 0;
 }
+
