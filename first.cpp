@@ -53,7 +53,7 @@ int main() {
 
     return 0;
 }*/
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 int main() {
@@ -68,6 +68,20 @@ int main() {
 
     cout << "Sum of digits = " << sum << endl;
     return 0;
+}*/
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num = 12345, reversed = 0;
+    while (num != 0) {
+        int digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num /= 10;
+    }
+    cout << "Reversed number: " << reversed << endl;
+    return 0;
 }
+
 
 
