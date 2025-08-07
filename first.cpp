@@ -69,7 +69,7 @@ int main() {
     cout << "Sum of digits = " << sum << endl;
     return 0;
 }*/
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 int main() {
@@ -81,7 +81,23 @@ int main() {
     }
     cout << "Reversed number: " << reversed << endl;
     return 0;
+}*/
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {10, 22, 5, 90, 56};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int maxVal = arr[0];
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > maxVal) maxVal = arr[i];
+    }
+
+    cout << "Largest element: " << maxVal << endl;
+    return 0;
 }
+
 
 
 
