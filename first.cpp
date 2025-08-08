@@ -113,7 +113,7 @@ int main() {
     cout << (isPrime(num) ? "Prime" : "Not Prime") << endl;
     return 0;
 }*/
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 int main() {
@@ -132,7 +132,23 @@ int main() {
 
     if (second == INT_MIN) cout << "No second largest element\n";
     else cout << "Second largest element: " << second << endl;
+}*/
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+bool isAnagram(string s1, string s2) {
+    if (s1.length() != s2.length()) return false;
+    sort(s1.begin(), s1.end());
+    sort(s2.begin(), s2.end());
+    return s1 == s2;
 }
+
+int main() {
+    string s1 = "listen", s2 = "silent";
+    cout << (isAnagram(s1, s2) ? "Anagram" : "Not Anagram");
+}
+
 
 
 
