@@ -133,7 +133,7 @@ int main() {
     if (second == INT_MIN) cout << "No second largest element\n";
     else cout << "Second largest element: " << second << endl;
 }*/
-#include <iostream>
+/*#include <iostream>
 #include <algorithm>
 using namespace std;
 
@@ -147,6 +147,21 @@ bool isAnagram(string s1, string s2) {
 int main() {
     string s1 = "listen", s2 = "silent";
     cout << (isAnagram(s1, s2) ? "Anagram" : "Not Anagram");
+}*/
+#include <iostream>
+using namespace std;
+
+int fibonacci(int n) {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int n = 10;
+    cout << "Fibonacci series: ";
+    for (int i = 0; i < n; i++) {
+        cout << fibonacci(i) << " ";
+    }
 }
 
 
