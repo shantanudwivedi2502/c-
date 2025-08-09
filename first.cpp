@@ -163,7 +163,7 @@ int main() {
         cout << fibonacci(i) << " ";
     }
 }*/
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 int binarySearch(int arr[], int n, int target) {
@@ -185,7 +185,25 @@ int main() {
     int result = binarySearch(arr, n, target);
     if (result != -1) cout << "Element found at index " << result;
     else cout << "Element not found";
+}*/
+#include <iostream>
+using namespace std;
+
+int findMax(int arr[], int n) {
+    int maxVal = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > maxVal) maxVal = arr[i];
+    }
+    return maxVal;
 }
+
+int main() {
+    int arr[] = {5, 8, 3, 9, 2};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout << "Maximum: " << findMax(arr, n) << endl;
+    return 0;
+}
+
 
 
 
