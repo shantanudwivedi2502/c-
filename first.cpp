@@ -186,7 +186,7 @@ int main() {
     if (result != -1) cout << "Element found at index " << result;
     else cout << "Element not found";
 }*/
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 int findMax(int arr[], int n) {
@@ -201,6 +201,23 @@ int main() {
     int arr[] = {5, 8, 3, 9, 2};
     int n = sizeof(arr) / sizeof(arr[0]);
     cout << "Maximum: " << findMax(arr, n) << endl;
+    return 0;
+}*/
+#include <iostream>
+using namespace std;
+
+int sumOfDigits(int n) {
+    int sum = 0;
+    while (n > 0) {
+        sum += n % 10;
+        n /= 10;
+    }
+    return sum;
+}
+
+int main() {
+    int num = 1234;
+    cout << "Sum of digits: " << sumOfDigits(num) << endl;
     return 0;
 }
 
