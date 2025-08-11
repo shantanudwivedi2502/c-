@@ -221,43 +221,20 @@ int main() {
     return 0;
 }*/
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-void fibonacci(int n) {
-    int a = 0, b = 1;
-    cout << a << " " << b << " ";
-    for (int i = 2; i < n; i++) {
-        int next = a + b;
-        cout << next << " ";
-        a = b;
-        b = next;
+bool isPrime(int n) {
+    if (n <= 1) return false;
+    for (int i = 2; i <= sqrt(n); i++) {
+        if (n % i == 0) return false;
     }
-    cout << endl;
+    return true;
 }
 
 int main() {
-    int n = 10;
-    fibonacci(n);
-    return 0;
-}
-#include <iostream>
-using namespace std;
-
-void fibonacci(int n) {
-    int a = 0, b = 1;
-    cout << a << " " << b << " ";
-    for (int i = 2; i < n; i++) {
-        int next = a + b;
-        cout << next << " ";
-        a = b;
-        b = next;
-    }
-    cout << endl;
-}
-
-int main() {
-    int n = 10;
-    fibonacci(n);
+    int num = 29;
+    cout << num << " is " << (isPrime(num) ? "Prime" : "Not Prime") << endl;
     return 0;
 }
 
