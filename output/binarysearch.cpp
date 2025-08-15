@@ -86,20 +86,32 @@ int main()
 #include <iostream>
 using namespace std;
 
-void fibonacci(int n) {
-    int a = 0, b = 1;
-    cout << a << " " << b << " ";
-    for (int i = 2; i < n; i++) {
-        int next = a + b;
-        cout << next << " ";
-        a = b;
-        b = next;
+int secondLargest(int arr[], int n) {
+    int first = INT_MIN, second = INT_MIN;
+
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > first) {
+            second = first;
+            first = arr[i];
+        } 
+        else if (arr[i] > second && arr[i] != first) {
+            second = arr[i];
+        }
     }
-    cout << endl;
+    return (second == INT_MIN) ? -1 : second; // Return -1 if no second largest exists
 }
 
 int main() {
-    int n = 10;
-    fibonacci(n);
+    int arr[] = {10, 20, 4, 45, 99, 99};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    int result = secondLargest(arr, n);
+
+    if (result == -1) {
+        cout << "No second largest element exists" << endl;
+    } else {
+        cout << "Second largest element: " << result << endl;
+    }
     return 0;
 }
+
