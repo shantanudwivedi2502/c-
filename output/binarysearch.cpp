@@ -83,7 +83,7 @@ int main()
     int arr[5]={5,4,3,2,1};
     sort(arr,5);
 }*/
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 int secondLargest(int arr[], int n) {
@@ -113,5 +113,25 @@ int main() {
         cout << "Second largest element: " << result << endl;
     }
     return 0;
+}*/
+#include <iostream>
+using namespace std;
+
+string reverseString(string s) {
+    int left = 0, right = s.size() - 1;
+    while (left < right) {
+        swap(s[left], s[right]);
+        left++;
+        right--;
+    }
+    return s;
 }
+
+int main() {
+    string str = "Hello";
+    cout << "Original: " << str << endl;
+    cout << "Reversed: " << reverseString(str) << endl;
+    return 0;
+}
+
 
